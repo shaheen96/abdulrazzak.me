@@ -60,9 +60,13 @@ const VREELS = [
     title:"Oxygeneo Facial", note:"Beauty & treatment" }
 ];
 
+/* Design pieces. `url` is optional — add one and the tile becomes a link
+   that opens the full project in a new tab. Leave it out for a plain image. */
 const DESIGNS = [
-  { src:"images/design/design-01.jpg", alt:"Large-format campaign artwork" },
-  { src:"images/design/design-02.jpg", alt:"Brand collateral" },
+  { src:"images/design/design-01.jpg", alt:"Social media design set",
+    title:"Social Media", url:"https://www.behance.net/gallery/244742483/Social-Media" },
+  { src:"images/design/design-02.jpg", alt:"Haram Transfer brand guidelines",
+    title:"Brand Guidelines", url:"https://www.behance.net/gallery/159319755/Brand-Guidelines" },
   { src:"images/design/design-03.jpg", alt:"Outdoor signage layout" }
 ];
 
@@ -199,9 +203,18 @@ document.querySelectorAll(".chip").forEach(chip => {
 (function renderDesign() {
   const wrap = $("#strip");
   if (!DESIGNS.length) { wrap.closest("section").hidden = true; return; }
-  wrap.innerHTML = DESIGNS.map(d =>
-    `<img class="rv" src="${d.src}" alt="${d.alt}" loading="lazy" decoding="async">`
-  ).join("");
+  wrap.innerHTML = DESIGNS.map(d => {
+    const img = `<img src="${d.src}" alt="${d.alt}" loading="lazy" decoding="async">`;
+    if (!d.url) return `<figure class="tile rv">${img}</figure>`;
+    return `<a class="tile tile--link rv" href="${d.url}" target="_blank" rel="noopener"
+              aria-label="${d.title || d.alt} — opens on Behance">
+      ${img}
+      <span class="tile__meta">
+        <span class="tile__title">${d.title || d.alt}</span>
+        <span class="tile__go">View project &#8599;</span>
+      </span>
+    </a>`;
+  }).join("");
 })();
 
 /* ---- lightbox ---- */
