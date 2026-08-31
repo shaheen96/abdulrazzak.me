@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Abdul Razzak Shahin — Photographer, Dubai</title>
-<meta name="description" content="Photographer and videographer based in Dubai. Corporate, events, portraits, product and location work.">
+<title>Abdul Razzak Shahin — Photographer &amp; Videographer, Dubai</title>
+<meta name="description" content="Photographer &amp; videographer based in Dubai. Corporate, event, portrait and product work across the UAE, shot and finished end to end.">
 <link rel="canonical" href="https://abdulrazzak.me/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://abdulrazzak.me/">
-<meta property="og:title" content="Abdul Razzak Shahin — Photographer, Dubai">
-<meta property="og:description" content="Corporate, events, portraits, product and location photography in the UAE.">
+<meta property="og:title" content="Abdul Razzak Shahin — Photographer &amp; Videographer, Dubai">
+<meta property="og:description" content="Corporate, event, portrait and product work across the UAE, shot and finished end to end.">
 <meta property="og:image" content="https://abdulrazzak.me/images/hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -18,12 +18,12 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<a class="skip" href="#work">Skip to work</a>
+<a class="skip" href="#work" data-i18n="skip">Skip to work</a>
 
 <header class="nav" id="nav">
   <a class="nav__mark" href="#top">
@@ -31,18 +31,19 @@
     <span class="nav__name">Abdul Razzak Shahin</span>
   </a>
   <nav class="nav__links" aria-label="Sections">
-    <a href="#work">Work</a>
-    <a href="#motion">Motion</a>
-    <a href="#reels-v">Reels</a>
-    <a href="#design">Design</a>
-    <a href="#about">About</a>
-    <a class="nav__cta" href="#contact">Contact</a>
+    <a href="#work"    data-i18n="nav.work">Work</a>
+    <a href="#motion"  data-i18n="nav.motion">Video</a>
+    <a href="#reels-v" data-i18n="nav.reels">Reels</a>
+    <a href="#design"  data-i18n="nav.design">Design</a>
+    <a href="#about"   data-i18n="nav.about">About</a>
+    <button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button>
+    <a class="nav__cta" href="#contact" data-i18n="nav.contact">Contact</a>
   </nav>
 </header>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
-  <img class="hero__img" src="images/hero.jpg" alt="" fetchpriority="high" width="2000" height="1125">
+  <img class="hero__img" src="images/hero.jpg" alt="" fetchpriority="high" width="2200" height="1238">
   <div class="hero__veil" aria-hidden="true"></div>
   <div class="hero__key" aria-hidden="true"></div>
 
@@ -51,114 +52,113 @@
     <img src="images/portrait.png" alt="Portrait of Abdul Razzak Shahin" width="900" height="1080">
     <figcaption>
       <span class="portrait__no">01</span>
-      <span class="portrait__txt">Dubai, UAE<br>Available for work</span>
+      <span class="portrait__txt" data-i18n-html="hero.badge">Dubai, UAE<br>Available for work</span>
     </figcaption>
   </figure>
 
   <div class="hero__body">
-    <p class="frame">Frame 001 &nbsp;·&nbsp; Dubai, UAE</p>
-    <h1 class="hero__title">Abdul Razzak<br>Shahin</h1>
-    <p class="hero__sub">Photographer &amp; videographer. I shoot corporate, events, portraits, product and location work across the UAE — and take it through to the finished, on-brand file.</p>
+    <p class="frame" data-i18n="hero.frame">Frame 001 &nbsp;·&nbsp; Dubai, UAE</p>
+    <h1 class="hero__title" data-i18n-html="hero.title">Abdul Razzak<br>Shahin</h1>
+    <p class="hero__sub" data-i18n="hero.sub">Photographer &amp; videographer based in Dubai. I shoot corporate, event, portrait and product work across the UAE, then take it through post to a finished, on-brand file.</p>
     <div class="hero__acts">
-      <a class="btn" href="#work">See the work</a>
-      <a class="btn btn--ghost" href="cv.pdf" download>Download CV</a>
+      <a class="btn" href="#work" data-i18n="hero.cta1">See the work</a>
+      <a class="btn btn--ghost" href="cv.pdf" download data-i18n="hero.cta2">Download CV</a>
     </div>
   </div>
-  <span class="scroll" aria-hidden="true">Scroll</span>
+  <span class="scroll" aria-hidden="true" data-i18n="scroll">Scroll</span>
 </section>
 
 <!-- ============ WORK ============ -->
 <section class="section" id="work">
   <div class="head">
-    <p class="eyebrow">Selected photography</p>
-    <h2 class="h2">The contact sheet</h2>
-    <p class="lede">Twenty-odd frames, chosen hard. Filter by what you need to see.</p>
+    <p class="eyebrow" data-i18n="work.eyebrow">Selected photography</p>
+    <h2 class="h2" data-i18n="work.title">The contact sheet</h2>
+    <p class="lede" data-i18n="work.lede">A tight edit, not an archive. Filter by what you need to see.</p>
   </div>
 
   <div class="filters" role="tablist" aria-label="Filter photography">
-    <button class="chip is-on" role="tab" aria-selected="true" data-filter="all">All</button>
-    <button class="chip" role="tab" aria-selected="false" data-filter="corporate">Corporate</button>
-    <button class="chip" role="tab" aria-selected="false" data-filter="events">Events</button>
-    <button class="chip" role="tab" aria-selected="false" data-filter="portraits">Portraits</button>
-    <button class="chip" role="tab" aria-selected="false" data-filter="product">Product</button>
-    <button class="chip" role="tab" aria-selected="false" data-filter="location">Location</button>
+    <button class="chip is-on" role="tab" aria-selected="true"  data-filter="all"        data-i18n="filter.all">All</button>
+    <button class="chip"       role="tab" aria-selected="false" data-filter="corporate"  data-i18n="filter.corporate">Corporate</button>
+    <button class="chip"       role="tab" aria-selected="false" data-filter="events"     data-i18n="filter.events">Events</button>
+    <button class="chip"       role="tab" aria-selected="false" data-filter="portraits"  data-i18n="filter.portraits">Portraits</button>
+    <button class="chip"       role="tab" aria-selected="false" data-filter="product"    data-i18n="filter.product">Product</button>
+    <button class="chip"       role="tab" aria-selected="false" data-filter="location"   data-i18n="filter.location">Location</button>
   </div>
 
   <div class="grid" id="grid"></div>
-  <p class="empty" id="empty" hidden>No frames in this set yet.</p>
+  <p class="empty" id="empty" hidden data-i18n="work.empty">No frames in this set yet.</p>
 </section>
 
 <!-- ============ MOTION ============ -->
 <section class="section section--tint" id="motion">
   <div class="head">
-    <p class="eyebrow">Moving image</p>
-    <h2 class="h2">Motion</h2>
-    <p class="lede">Shot, cut, graded and mixed. Camera through to delivery spec.</p>
+    <p class="eyebrow" data-i18n="motion.eyebrow">Moving image</p>
+    <h2 class="h2" data-i18n="motion.title">Video Production</h2>
+    <p class="lede" data-i18n="motion.lede">From camera to final delivery — filming, editing, colour grading and post-production for brands, events and corporate projects.</p>
   </div>
   <div class="reels" id="reels"></div>
 </section>
 
-<!-- ============ REELS (vertical) ============ -->
+<!-- ============ REELS ============ -->
 <section class="section" id="reels-v">
   <div class="head">
-    <p class="eyebrow">Vertical / social</p>
-    <h2 class="h2">Reels</h2>
-    <p class="lede">Shot vertical from the start — not cropped down from a landscape file. Tap to play with sound.</p>
+    <p class="eyebrow" data-i18n="reels.eyebrow">Vertical &amp; social</p>
+    <h2 class="h2" data-i18n="reels.title">Reels &amp; Social Video</h2>
+    <p class="lede" data-i18n="reels.lede">Vertical-first content for brands, events and campaigns — from filming and editing to the final social-ready cut.</p>
   </div>
   <div class="rail" id="rail" tabindex="0" aria-label="Vertical reels, scroll horizontally"></div>
-  <p class="mono rail__hint">Drag or swipe &rarr;</p>
+  <p class="mono rail__hint" data-i18n="reels.hint">Drag or swipe &rarr;</p>
 </section>
 
 <!-- ============ DESIGN ============ -->
-<section class="section" id="design">
+<section class="section section--tint" id="design">
   <div class="head">
-    <p class="eyebrow">Adjacent craft</p>
-    <h2 class="h2">Design &amp; large format</h2>
-    <p class="lede">A graphic design background is why I know how a frame behaves once it is enlarged, printed and mounted.</p>
+    <p class="eyebrow" data-i18n="design.eyebrow">Design experience</p>
+    <h2 class="h2" data-i18n="design.title">Graphic Design &amp; Large Format</h2>
+    <p class="lede" data-i18n="design.lede">I create visuals that work across digital, print and large-format applications — from social media and brand assets to banners, signage and outdoor advertising.</p>
   </div>
   <div class="strip" id="strip"></div>
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section class="section section--tint" id="about">
+<section class="section" id="about">
   <div class="about">
     <figure class="about__fig">
       <img src="images/portrait.png" alt="Portrait of Abdul Razzak Shahin" width="900" height="1080" loading="lazy">
-      <figcaption class="mono">Studio portrait · Dubai</figcaption>
+      <figcaption class="mono" data-i18n="about.caption">Studio portrait · Dubai</figcaption>
     </figure>
     <div class="about__body">
-      <p class="eyebrow">About</p>
-      <h2 class="h2">I make the picture, then I finish it.</h2>
-      <p>I am a photographer and videographer based in Dubai. Since 2021 I have shot for healthcare, hospitality and entertainment brands across the UAE — corporate portraits, facility and location work, product, and full event coverage.</p>
-      <p>I set up my own camera, lighting and audio, and I take everything through post myself: culling, retouching, colour correction, grading, sound and export to whatever the destination needs. I hold a Bachelor's degree in Graphic Design and a Multimedia Journalism diploma, which is the reason I think about resolution, colour and viewing distance before I press the shutter, not after.</p>
+      <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+      <h2 class="h2" data-i18n="about.title">I make the picture, then I finish it.</h2>
+      <p data-i18n="about.p1">I am a photographer and videographer based in Dubai. Since 2021 I have worked with healthcare, hospitality and entertainment brands across the UAE — corporate portraits, facility and location photography, product work, and full event coverage.</p>
+      <p data-i18n="about.p2">I set up my own camera, lighting and audio, and I carry everything through post myself: culling, retouching, colour correction, grading, sound and export to whatever the destination needs. A degree in graphic design and a multimedia journalism diploma are the reason I think about resolution, colour and viewing distance before I press the shutter rather than after.</p>
       <ul class="facts">
-        <li><span class="mono">Based</span> Dubai, UAE</li>
-        <li><span class="mono">Shooting</span> DSLR · drone · gimbal · studio lighting</li>
-        <li><span class="mono">Post</span> Lightroom · Photoshop · Premiere Pro · After Effects</li>
-        <li><span class="mono">Languages</span> Arabic (native) · English (professional)</li>
+        <li><span class="mono" data-i18n="facts.based">Based</span> <span data-i18n="facts.basedv">Dubai, UAE</span></li>
+        <li><span class="mono" data-i18n="facts.shoot">Shooting</span> <span data-i18n="facts.shootv">DSLR · drone · gimbal · studio lighting</span></li>
+        <li><span class="mono" data-i18n="facts.post">Post</span> <span data-i18n="facts.postv">Lightroom · Photoshop · Premiere Pro · After Effects</span></li>
+        <li><span class="mono" data-i18n="facts.lang">Languages</span> <span data-i18n="facts.langv">Arabic (native) · English (professional)</span></li>
       </ul>
-      <a class="btn btn--ghost" href="cv.pdf" download>Download CV (PDF)</a>
+      <a class="btn btn--ghost" href="cv.pdf" download data-i18n="about.cv">Download CV (PDF)</a>
     </div>
   </div>
 </section>
 
 <!-- ============ CONTACT ============ -->
-<section class="section contact" id="contact">
-  <p class="eyebrow">Available for assignments and full-time roles</p>
+<section class="section section--tint contact" id="contact">
+  <p class="eyebrow" data-i18n="contact.eyebrow">Available for assignments and full-time roles</p>
   <a class="contact__mail" href="mailto:Abdalrzak.shaheen@gmail.com">Abdalrzak.shaheen@gmail.com</a>
   <div class="contact__row">
-    <a class="btn" href="https://wa.me/971543727507">WhatsApp</a>
-    <a class="btn btn--ghost" href="https://www.behance.net/abdalrzshaheen" target="_blank" rel="noopener">Behance</a>
+    <a class="btn" href="https://wa.me/971543727507" data-i18n="contact.wa">WhatsApp</a>
     <a class="btn btn--ghost" href="https://www.linkedin.com/in/Abdalrzak-shaheen" target="_blank" rel="noopener">LinkedIn</a>
   </div>
-  <p class="mono foot">Dubai, UAE · +971 54 372 7507 · © <span id="yr"></span> Abdul Razzak Shahin</p>
+  <p class="mono foot"><span data-i18n="foot">Dubai, UAE · +971 54 372 7507</span> · © <span id="yr"></span> Abdul Razzak Shahin</p>
 </section>
 
 <!-- ============ LIGHTBOX ============ -->
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
-  <button class="lb__x" id="lbClose" aria-label="Close viewer">&times;</button>
-  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
-  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Next image">&#8250;</button>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Viewer" hidden>
+  <button class="lb__x" id="lbClose" aria-label="Close">&times;</button>
+  <button class="lb__nav lb__nav--prev" id="lbPrev" aria-label="Previous">&#8249;</button>
+  <button class="lb__nav lb__nav--next" id="lbNext" aria-label="Next">&#8250;</button>
   <figure class="lb__fig">
     <img id="lbImg" src="" alt="">
     <figcaption><span id="lbCap"></span><span class="mono" id="lbExif"></span></figcaption>

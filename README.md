@@ -34,7 +34,26 @@ ffmpeg -i reels/reel-01.mp4 -ss 0 -frames:v 1 -q:v 3 reels/reel-01.jpg
 mogrify -resize 2000x2000\> -quality 80 -strip images/*.jpg
 ```
 
-## 2. Edit the captions
+## 2. Language
+
+The site is English-first with a full Arabic layer. One button in the nav flips
+`lang` / `dir` on `<html>` and repaints every string. The choice is remembered
+in `localStorage`.
+
+All copy lives in the `I18N` dictionary at the top of `script.js` — two objects,
+`en` and `ar`, with matching keys. **Change a string in both.** In the markup,
+`data-i18n="key"` swaps text and `data-i18n-html="key"` swaps HTML (used where a
+`<br>` is needed).
+
+Card titles are translated on the data itself: add `title_ar` and `note_ar`
+alongside `title` and `note`. If an Arabic field is missing the English shows
+through, so a half-translated entry degrades quietly instead of going blank.
+
+Note: `left:-9999px` for visually-hidden elements breaks RTL — it inflates
+`scrollWidth` and parks the viewport in empty space. Use the clip pattern on
+`.skip` instead.
+
+## 3. Edit the captions
 
 Open `script.js`. Everything you can change sits in the first 40 lines.
 
@@ -59,7 +78,7 @@ Open `script.js`. Everything you can change sits in the first 40 lines.
 
 Want more or fewer than 12 photos? Add or delete lines in `PHOTOS`. The grid and the frame numbers follow automatically.
 
-## 3. Put it online — Cloudflare Pages (free)
+## 4. Put it online — Cloudflare Pages (free)
 
 1. Push this folder to a GitHub repo.
 2. Cloudflare dashboard → Workers & Pages → Create → Pages → Connect to Git.

@@ -30,7 +30,12 @@ const PHOTOS = [
 const REELS = [
   { host:"vimeo", id:"1222497309",
     poster:"https://i.vimeocdn.com/video/2195468797-43ecd277eb6b2edda8cb1ee6c82f437ab4a9288c77e232917777ca94c0c94737-d_1200",
-    title:"Dr Sunny Year End Party 2025", note:"Event film — shot, cut, graded and mixed." }
+    title:"Dr Sunny Year End Party 2025", note:"Event film — multi-camera coverage, cut, graded and mixed.",
+    title_ar:"حفل نهاية العام — دكتور صني ٢٠٢٥", note_ar:"فيلم فعالية — تغطية بأكثر من كاميرا، مونتاج وتدرّج لوني ومزج صوتي." },
+  { host:"vimeo", id:"1222667458",
+    poster:"https://i.vimeocdn.com/video/2195684922-6c16565bb592460d0546aa97303f43a460564c1e034567ac28c97df9d266b845-d_1200",
+    title:"Maika", note:"Brand film — concept through to final grade.",
+    title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." }
 ];
 
 /* Vertical 9:16 reels.
@@ -51,24 +56,127 @@ const REELS = [
 const VREELS = [
   { type:"vimeo", id:"1222492466",
     poster:"https://i.vimeocdn.com/video/2195461360-19adeea2be5fbfab8df077dbb1f0c8e96949308ad040ffcec4831bdad4fb4a69-d_1200",
-    title:"1000+ Employees, One Team", note:"Corporate film" },
+    title:"1000+ Employees, One Team", note:"Corporate film",
+    title_ar:"أكثر من ١٠٠٠ موظف، فريق واحد", note_ar:"فيلم مؤسسي" },
   { type:"vimeo", id:"1222493958",
     poster:"https://i.vimeocdn.com/video/2195463516-b307a4250a213c46f5ce52c67d1022a4d4ccbbaa30194dd4b991a9dae5928afa-d_1200",
-    title:"Aston Martin", note:"Automotive film" },
+    title:"Aston Martin", note:"Automotive film",
+    title_ar:"أستون مارتن", note_ar:"فيلم سيارات" },
   { type:"vimeo", id:"1222497108",
     poster:"https://i.vimeocdn.com/video/2195467709-5cf269380a947e100471ddd42e158184d292045a65987030dee8533f5d4a12c8-d_1200",
-    title:"Oxygeneo Facial", note:"Beauty & treatment" }
+    title:"Oxygeneo Facial", note:"Beauty & treatment",
+    title_ar:"جلسة أوكسيجينيو للبشرة", note_ar:"تجميل وعناية" },
+  { type:"vimeo", id:"1222625576",
+    poster:"https://i.vimeocdn.com/video/2195632700-acf43df98d3db9143edb60f33bcc9c5c6548c70122eca0f7f1673a4351d0593c-d_1200",
+    title:"Dr Sunny App", note:"Product launch",
+    title_ar:"تطبيق دكتور صني", note_ar:"إطلاق منتج" },
+  { type:"vimeo", id:"1222668318",
+    poster:"https://i.vimeocdn.com/video/2195686136-df649bb520e681e2445630d104dd60ae992cff53ac3e59be2c29d492d5ec082b-d_1200",
+    title:"Happy Onam", note:"Seasonal campaign",
+    title_ar:"أونام سعيد", note_ar:"حملة موسمية" },
+  { type:"vimeo", id:"1222613807",
+    poster:"https://i.vimeocdn.com/video/2195618636-dbbc3df25e11e015194cb2713ce597be66b724bdbb45284fc820d0b5667f0a10-d_1200",
+    title:"Nano Teeth Whitening", note:"Treatment promo",
+    title_ar:"تبييض الأسنان بالنانو", note_ar:"إعلان علاجي" },
+  { type:"vimeo", id:"1222646989",
+    poster:"https://i.vimeocdn.com/video/2195659823-914ff5ae4c95a245638f6c41218088319ed9b7b71c60cf6d81303042ed9d1e1a-d_1200",
+    title:"Emirati Women's Day", note:"National campaign",
+    title_ar:"يوم المرأة الإماراتية", note_ar:"حملة وطنية" }
 ];
 
 /* Design pieces. `url` is optional — add one and the tile becomes a link
    that opens the full project in a new tab. Leave it out for a plain image. */
 const DESIGNS = [
   { src:"images/design/design-01.jpg", alt:"Social media design set",
-    title:"Social Media", url:"https://www.behance.net/gallery/244742483/Social-Media" },
+    title:"Social Media", title_ar:"تصاميم السوشال ميديا", url:"https://www.behance.net/gallery/244742483/Social-Media" },
   { src:"images/design/design-02.jpg", alt:"Haram Transfer brand guidelines",
-    title:"Brand Guidelines", url:"https://www.behance.net/gallery/159319755/Brand-Guidelines" },
+    title:"Brand Guidelines", title_ar:"دليل الهوية البصرية", url:"https://www.behance.net/gallery/159319755/Brand-Guidelines" },
   { src:"images/design/design-03.jpg", alt:"Outdoor signage layout" }
 ];
+
+
+/* =========================== LANGUAGE ===========================
+   English is the primary language. Arabic is a full translation
+   layer applied over the same markup — no second page to maintain.
+   To change a string, edit it in BOTH dictionaries below.        */
+
+const I18N = {
+  en: {
+    "skip":"Skip to work",
+    "nav.work":"Work", "nav.motion":"Video", "nav.reels":"Reels",
+    "nav.design":"Design", "nav.about":"About", "nav.contact":"Contact",
+    "hero.frame":"Frame 001 \u00a0·\u00a0 Dubai, UAE",
+    "hero.title":"Abdul Razzak<br>Shahin",
+    "hero.badge":"Dubai, UAE<br>Available for work",
+    "hero.sub":"Photographer & videographer based in Dubai. I shoot corporate, event, portrait and product work across the UAE, then take it through post to a finished, on-brand file.",
+    "hero.cta1":"See the work", "hero.cta2":"Download CV", "scroll":"Scroll",
+    "work.eyebrow":"Selected photography", "work.title":"The contact sheet",
+    "work.lede":"A tight edit, not an archive. Filter by what you need to see.",
+    "work.empty":"No frames in this set yet.",
+    "filter.all":"All", "filter.corporate":"Corporate", "filter.events":"Events",
+    "filter.portraits":"Portraits", "filter.product":"Product", "filter.location":"Location",
+    "motion.eyebrow":"Moving image", "motion.title":"Video Production",
+    "motion.lede":"From camera to final delivery — filming, editing, colour grading and post-production for brands, events and corporate projects.",
+    "reels.eyebrow":"Vertical & social", "reels.title":"Reels & Social Video",
+    "reels.lede":"Vertical-first content for brands, events and campaigns — from filming and editing to the final social-ready cut.",
+    "reels.hint":"Drag or swipe \u2192",
+    "design.eyebrow":"Design experience", "design.title":"Graphic Design & Large Format",
+    "design.lede":"I create visuals that work across digital, print and large-format applications — from social media and brand assets to banners, signage and outdoor advertising.",
+    "design.view":"View project \u2197",
+    "about.eyebrow":"About", "about.title":"I make the picture, then I finish it.",
+    "about.caption":"Studio portrait · Dubai",
+    "about.p1":"I am a photographer and videographer based in Dubai. Since 2021 I have worked with healthcare, hospitality and entertainment brands across the UAE — corporate portraits, facility and location photography, product work, and full event coverage.",
+    "about.p2":"I set up my own camera, lighting and audio, and I carry everything through post myself: culling, retouching, colour correction, grading, sound and export to whatever the destination needs. A degree in graphic design and a multimedia journalism diploma are the reason I think about resolution, colour and viewing distance before I press the shutter rather than after.",
+    "facts.based":"Based",     "facts.basedv":"Dubai, UAE",
+    "facts.shoot":"Shooting",  "facts.shootv":"DSLR · drone · gimbal · studio lighting",
+    "facts.post":"Post",       "facts.postv":"Lightroom · Photoshop · Premiere Pro · After Effects",
+    "facts.lang":"Languages",  "facts.langv":"Arabic (native) · English (professional)",
+    "about.cv":"Download CV (PDF)",
+    "contact.eyebrow":"Available for assignments and full-time roles",
+    "contact.wa":"WhatsApp",
+    "foot":"Dubai, UAE · +971 54 372 7507",
+    "frameWord":"Frame", "reelWord":"Reel", "langBtn":"العربية"
+  },
+  ar: {
+    "skip":"تخطَّ إلى الأعمال",
+    "nav.work":"الأعمال", "nav.motion":"الفيديو", "nav.reels":"الريلز",
+    "nav.design":"التصميم", "nav.about":"نبذة", "nav.contact":"تواصل",
+    "hero.frame":"الإطار ٠٠١ \u00a0·\u00a0 دبي، الإمارات",
+    "hero.title":"عبد الرزاق<br>شاهين",
+    "hero.badge":"دبي، الإمارات<br>متاح للعمل",
+    "hero.sub":"مصوّر فوتوغرافي وفيديو مقيم في دبي. أصوّر الأعمال المؤسسية والفعاليات والبورتريه والمنتجات في أنحاء الإمارات، ثم أتولّى المونتاج والمعالجة حتى الملف النهائي المطابق للهوية.",
+    "hero.cta1":"شاهد الأعمال", "hero.cta2":"تحميل السيرة الذاتية", "scroll":"مرّر",
+    "work.eyebrow":"مختارات من التصوير", "work.title":"ورقة التواصل",
+    "work.lede":"انتقاء مركّز لا أرشيف. صفِّ حسب ما تريد رؤيته.",
+    "work.empty":"لا توجد صور في هذه الفئة بعد.",
+    "filter.all":"الكل", "filter.corporate":"مؤسسي", "filter.events":"فعاليات",
+    "filter.portraits":"بورتريه", "filter.product":"منتجات", "filter.location":"مواقع",
+    "motion.eyebrow":"الصورة المتحركة", "motion.title":"إنتاج الفيديو",
+    "motion.lede":"من الكاميرا حتى التسليم النهائي — تصوير ومونتاج وتدرّج لوني ومعالجة ما بعد الإنتاج للعلامات التجارية والفعاليات والمشاريع المؤسسية.",
+    "reels.eyebrow":"عمودي واجتماعي", "reels.title":"الريلز وفيديو السوشال",
+    "reels.lede":"محتوى عمودي أولاً للعلامات التجارية والفعاليات والحملات — من التصوير والمونتاج حتى النسخة النهائية الجاهزة للنشر.",
+    "reels.hint":"اسحب للجانب \u2190",
+    "design.eyebrow":"خبرة في التصميم", "design.title":"التصميم الجرافيكي والطباعة الكبيرة",
+    "design.lede":"أصمّم أعمالاً بصرية تعمل على المنصات الرقمية والمطبوعات والتطبيقات كبيرة الحجم — من محتوى السوشال ميديا وأصول الهوية إلى البانرات واللافتات والإعلانات الخارجية.",
+    "design.view":"عرض المشروع \u2197",
+    "about.eyebrow":"نبذة", "about.title":"ألتقط الصورة، ثم أُنهيها.",
+    "about.caption":"بورتريه استوديو · دبي",
+    "about.p1":"مصوّر فوتوغرافي وفيديو مقيم في دبي. منذ عام ٢٠٢١ أعمل مع علامات في قطاعات الرعاية الصحية والضيافة والترفيه في أنحاء الإمارات — بورتريهات مؤسسية، وتصوير مواقع ومنشآت، وتصوير منتجات، وتغطية كاملة للفعاليات.",
+    "about.p2":"أجهّز الكاميرا والإضاءة والصوت بنفسي، وأتولّى مرحلة ما بعد الإنتاج كاملة: الانتقاء والريتاتش وتصحيح الألوان والتدرّج اللوني والصوت والتصدير بالمواصفات المطلوبة. شهادتي في التصميم الجرافيكي ودبلوم الصحافة متعددة الوسائط هما سبب تفكيري في الدقة واللون ومسافة المشاهدة قبل الضغط على الزر لا بعده.",
+    "facts.based":"الإقامة",   "facts.basedv":"دبي، الإمارات",
+    "facts.shoot":"التصوير",   "facts.shootv":"DSLR · درون · جيمبال · إضاءة استوديو",
+    "facts.post":"المعالجة",   "facts.postv":"Lightroom · Photoshop · Premiere Pro · After Effects",
+    "facts.lang":"اللغات",     "facts.langv":"العربية (لغة أم) · الإنجليزية (احترافية)",
+    "about.cv":"تحميل السيرة الذاتية (PDF)",
+    "contact.eyebrow":"متاح للمهام المستقلة والوظائف بدوام كامل",
+    "contact.wa":"واتساب",
+    "foot":"دبي، الإمارات · ‎+971 54 372 7507",
+    "frameWord":"الإطار", "reelWord":"ريل", "langBtn":"English"
+  }
+};
+
+let LANG = "en";
+const T = k => (I18N[LANG] && I18N[LANG][k]) || I18N.en[k] || "";
 
 /* ===================== nothing to edit below ===================== */
 
@@ -87,13 +195,13 @@ function renderGrid(filter = "all") {
     const cell = document.createElement("button");
     cell.className = "cell rv";
     cell.type = "button";
-    cell.setAttribute("aria-label", `Open ${p.caption}`);
+    cell.setAttribute("aria-label", localised(p,"caption"));
     cell.dataset.i = i;
     cell.innerHTML = `
-      <img src="${p.src}" alt="${p.caption}" loading="lazy" decoding="async">
+      <img src="${p.src}" alt="${localised(p,"caption")}" loading="lazy" decoding="async">
       <span class="cell__meta">
-        <span class="cell__no">Frame ${pad(i + 1)}</span>
-        <span class="cell__cap">${p.caption}</span>
+        <span class="cell__no">${T("frameWord")} ${pad(i + 1)}</span>
+        <span class="cell__cap">${localised(p,"caption")}</span>
         ${p.exif ? `<span class="cell__exif">${p.exif}</span>` : ""}
       </span>`;
     cell.addEventListener("click", () => openLb(i));
@@ -115,19 +223,20 @@ document.querySelectorAll(".chip").forEach(chip => {
 });
 
 /* ---- motion (landscape) ---- */
-(function renderReels() {
+function renderReels() {
   const wrap = document.getElementById("reels");
+  wrap.innerHTML = "";
   if (!REELS.length) { wrap.closest("section").hidden = true; return; }
 
   REELS.forEach(r => {
     const card = document.createElement("article");
     card.className = "reel rv";
     card.innerHTML = `
-      <button class="reel__frame" type="button" aria-label="Play ${r.title}">
+      <button class="reel__frame" type="button" aria-label="${localised(r,"title")}">
         <img src="${r.poster}" alt="" loading="lazy" decoding="async">
         <span class="reel__play"></span>
       </button>
-      <div class="reel__cap"><h3>${r.title}</h3><p>${r.note}</p></div>`;
+      <div class="reel__cap"><h3>${localised(r,"title")}</h3><p>${localised(r,"note")}</p></div>`;
 
     card.querySelector(".reel__frame").addEventListener("click", e => {
       const frame = e.currentTarget;
@@ -142,12 +251,13 @@ document.querySelectorAll(".chip").forEach(chip => {
 
     wrap.appendChild(card);
   });
-})();
+}
 
 /* ---- vertical reels ---- */
-(function renderVReels(){
+function renderVReels(){
   const rail = document.getElementById("rail");
   const sect = document.getElementById("reels-v");
+  rail.innerHTML = "";
   if (!VREELS.length) { sect.hidden = true; return; }
 
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -156,7 +266,7 @@ document.querySelectorAll(".chip").forEach(chip => {
     const card = document.createElement("button");
     card.className = "vreel rv";
     card.type = "button";
-    card.setAttribute("aria-label", `Play ${r.title}`);
+    card.setAttribute("aria-label", localised(r,"title"));
 
     const media = r.type === "file"
       ? `<video src="${r.src}" poster="${r.poster}" muted loop playsinline preload="none"></video>`
@@ -167,9 +277,9 @@ document.querySelectorAll(".chip").forEach(chip => {
       <span class="vreel__scrim"></span>
       <span class="vreel__play"></span>
       <span class="vreel__meta">
-        <span class="vreel__no">Reel ${String(i + 1).padStart(2, "0")}</span>
-        <span class="vreel__title">${r.title}</span>
-        ${r.note ? `<span class="vreel__note">${r.note}</span>` : ""}
+        <span class="vreel__no">${T("reelWord")} ${String(i + 1).padStart(2, "0")}</span>
+        <span class="vreel__title">${localised(r,"title")}</span>
+        ${r.note ? `<span class="vreel__note">${localised(r,"note")}</span>` : ""}
       </span>`;
 
     card.addEventListener("click", () => openReel(r));
@@ -197,25 +307,25 @@ document.querySelectorAll(".chip").forEach(chip => {
     if (!down) return;
     rail.scrollLeft = s0 - (e.clientX - x0);
   });
-})();
+}
 
 /* ---- design ---- */
-(function renderDesign() {
+function renderDesign() {
   const wrap = $("#strip");
   if (!DESIGNS.length) { wrap.closest("section").hidden = true; return; }
   wrap.innerHTML = DESIGNS.map(d => {
     const img = `<img src="${d.src}" alt="${d.alt}" loading="lazy" decoding="async">`;
     if (!d.url) return `<figure class="tile rv">${img}</figure>`;
     return `<a class="tile tile--link rv" href="${d.url}" target="_blank" rel="noopener"
-              aria-label="${d.title || d.alt} — opens on Behance">
+              aria-label="${localised(d,"title") || d.alt}">
       ${img}
       <span class="tile__meta">
-        <span class="tile__title">${d.title || d.alt}</span>
-        <span class="tile__go">View project &#8599;</span>
+        <span class="tile__title">${localised(d,"title") || d.alt}</span>
+        <span class="tile__go">${T("design.view")}</span>
       </span>
     </a>`;
   }).join("");
-})();
+}
 
 /* ---- lightbox ---- */
 const lb = $("#lb"), lbImg = $("#lbImg"), lbCap = $("#lbCap"), lbExif = $("#lbExif");
@@ -244,8 +354,8 @@ function openReel(r) {
   }
   holder.insertBefore(node, holder.firstChild);
 
-  lbCap.textContent = r.title;
-  lbExif.textContent = r.note || "";
+  lbCap.textContent = localised(r,"title");
+  lbExif.textContent = localised(r,"note");
   document.getElementById("lbPrev").hidden = true;
   document.getElementById("lbNext").hidden = true;
   lb.hidden = false;
@@ -265,8 +375,8 @@ function openLb(i) {
 }
 function paint() {
   const p = shown[cur];
-  lbImg.src = p.src; lbImg.alt = p.caption;
-  lbCap.textContent = p.caption;
+  lbImg.src = p.src; lbImg.alt = localised(p,"caption");
+  lbCap.textContent = localised(p,"caption");
   lbExif.textContent = p.exif || "";
 }
 function closeLb() {
@@ -354,5 +464,48 @@ function observeReveals() {
 })();
 
 $("#yr").textContent = new Date().getFullYear();
-renderGrid("all");
+
+/* pick the Arabic variant of a field when available, else fall back */
+function localised(obj, key) {
+  if (LANG === "ar" && obj[key + "_ar"]) return obj[key + "_ar"];
+  return obj[key] || "";
+}
+
+function applyLang(lang) {
+  LANG = (lang === "ar") ? "ar" : "en";
+  const ar = LANG === "ar";
+
+  document.documentElement.lang = ar ? "ar" : "en";
+  document.documentElement.dir  = ar ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const v = T(el.dataset.i18n);
+    if (v) el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const v = T(el.dataset.i18nHtml);
+    if (v) el.innerHTML = v;
+  });
+
+  const btn = document.getElementById("lang");
+  if (btn) btn.textContent = T("langBtn");
+
+  // re-render the data-driven sections so their labels follow the language
+  const on = document.querySelector(".chip.is-on");
+  renderGrid(on ? on.dataset.filter : "all");
+  renderReels();
+  renderVReels();
+  renderDesign();
+
+  try { localStorage.setItem("lang", LANG); } catch (e) {}
+}
+
+document.getElementById("lang").addEventListener("click", () => {
+  applyLang(LANG === "en" ? "ar" : "en");
+});
+
+let saved = "en";
+try { saved = localStorage.getItem("lang") || "en"; } catch (e) {}
+applyLang(saved);
+
 observeReveals();
