@@ -23,6 +23,16 @@
 
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
+
+/* RTL WARNING — read before adding any off-screen element.
+   An absolutely positioned element at a large negative offset
+   (the old `left:-9999px` visually-hidden trick) inflates the
+   document width. In LTR the browser ignores it; in RTL the scroll
+   origin flips and the page opens on empty space — the whole site
+   renders blank. No overflow rule on html or body clips it, because
+   such an element escapes to the initial containing block. The only
+   fix is not to create the overflow: hide things with the clip
+   pattern used on .skip below. */
 body{
   margin:0; background:var(--ink); color:var(--mist);
   font-family:var(--body); font-size:17px; line-height:1.6;
