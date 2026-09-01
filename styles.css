@@ -24,6 +24,13 @@
 *{ box-sizing:border-box; }
 html{ scroll-behavior:smooth; }
 
+/* Arabic script reads visually smaller than Latin at the same pixel
+   size (shorter x-height, lighter default weight). Since every type
+   size in this file is set in rem, bumping the root size here scales
+   every heading, button, label and paragraph together — no need to
+   touch each selector individually. */
+html[lang="ar"]{ font-size:109%; }
+
 /* RTL WARNING — read before adding any off-screen element.
    An absolutely positioned element at a large negative offset
    (the old `left:-9999px` visually-hidden trick) inflates the
@@ -337,9 +344,11 @@ a{ color:inherit; }
 
 /* ---------- contact ---------- */
 .contact{ text-align:center; }
+.contact .eyebrow{ font-size:.86rem; }
+[lang="ar"] .about__body .eyebrow{ font-size:.86rem; }
 .contact__mail{
   display:inline-block; font-family:var(--display); font-weight:600;
-  font-size:clamp(1.25rem,4.4vw,2.9rem); letter-spacing:-.03em;
+  font-size:clamp(1.1rem,3.8vw,2.5rem); letter-spacing:-.03em;
   text-decoration:none; margin:6px 0 30px; word-break:break-word;
   background-image:linear-gradient(var(--amber),var(--amber));
   background-size:0% 2px; background-position:50% 100%; background-repeat:no-repeat;
