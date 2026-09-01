@@ -33,7 +33,7 @@ const REELS = [
     title:"Dr Sunny Year End Party 2025", note:"Event film — multi-camera coverage, cut, graded and mixed.",
     title_ar:"حفل نهاية العام — دكتور صني ٢٠٢٥", note_ar:"فيلم فعالية — تغطية بأكثر من كاميرا، مونتاج وتدرّج لوني ومزج صوتي." },
   { host:"vimeo", id:"1222667458",
-    poster:"https://i.vimeocdn.com/video/2195684922-6c16565bb592460d0546aa97303f43a460564c1e034567ac28c97df9d266b845-d_1200",
+    poster:"images/maika-poster.jpg",
     title:"Maika", note:"Brand film — concept through to final grade.",
     title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." }
 ];
@@ -55,11 +55,11 @@ const REELS = [
    Empty the array to hide the whole section. */
 const VREELS = [
   { type:"vimeo", id:"1222492466",
-    poster:"https://i.vimeocdn.com/video/2195461360-19adeea2be5fbfab8df077dbb1f0c8e96949308ad040ffcec4831bdad4fb4a69-d_1200",
+    poster:"reels/reel-01.jpg",
     title:"1000+ Employees, One Team", note:"Corporate film",
     title_ar:"أكثر من ١٠٠٠ موظف، فريق واحد", note_ar:"فيلم مؤسسي" },
   { type:"vimeo", id:"1222493958",
-    poster:"https://i.vimeocdn.com/video/2195463516-b307a4250a213c46f5ce52c67d1022a4d4ccbbaa30194dd4b991a9dae5928afa-d_1200",
+    poster:"reels/reel-02.jpg",
     title:"Aston Martin", note:"Automotive film",
     title_ar:"أستون مارتن", note_ar:"فيلم سيارات" },
   { type:"vimeo", id:"1222497108",
@@ -75,11 +75,11 @@ const VREELS = [
     title:"Happy Onam", note:"Seasonal campaign",
     title_ar:"أونام سعيد", note_ar:"حملة موسمية" },
   { type:"vimeo", id:"1222613807",
-    poster:"https://i.vimeocdn.com/video/2195618636-dbbc3df25e11e015194cb2713ce597be66b724bdbb45284fc820d0b5667f0a10-d_1200",
+    poster:"reels/reel-06.jpg",
     title:"Nano Teeth Whitening", note:"Treatment promo",
     title_ar:"تبييض الأسنان بالنانو", note_ar:"إعلان علاجي" },
   { type:"vimeo", id:"1222646989",
-    poster:"https://i.vimeocdn.com/video/2195659823-914ff5ae4c95a245638f6c41218088319ed9b7b71c60cf6d81303042ed9d1e1a-d_1200",
+    poster:"reels/reel-07.jpg",
     title:"Emirati Women's Day", note:"National campaign",
     title_ar:"يوم المرأة الإماراتية", note_ar:"حملة وطنية" }
 ];
@@ -496,6 +496,12 @@ function applyLang(lang) {
   renderReels();
   renderVReels();
   renderDesign();
+
+  // the sections above just replaced every .rv element with a fresh one;
+  // the old IntersectionObserver never saw the new nodes, so without this
+  // call everything they contain would stay invisible (opacity:0) until
+  // a full page reload re-ran the whole script from scratch.
+  observeReveals();
 
   try { localStorage.setItem("lang", LANG); } catch (e) {}
 }

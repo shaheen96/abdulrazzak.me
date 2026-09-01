@@ -11,8 +11,7 @@ Replace the placeholder files in `images/`. Keep the same filenames and everythi
 | `images/hero.jpg` | Full-screen opening frame. Landscape. Your single strongest image. |
 | `images/work-01.jpg` … `work-12.jpg` | Gallery. Any mix of portrait / landscape / square. |
 | `images/portrait.png` | Your headshot in the About section. |
-| `reels/reel-01.mp4` … `reel-05.mp4` | Vertical 9:16 reels. |
-| `reels/reel-01.jpg` … `reel-05.jpg` | Poster frame for each reel (first frame works). |
+| `reels/reel-0N.jpg` | Poster image for a Vimeo-hosted reel — save it locally instead of linking Vimeo's CDN, so the grid loads fast and never breaks if Vimeo regenerates a thumbnail URL. Not needed for reels you embed by `id` alone. |
 | `images/design/design-01…03.jpg` | Design section. Delete this folder if you'd rather drop the section. |
 | `cv.pdf` | The file the Download CV buttons serve. |
 
