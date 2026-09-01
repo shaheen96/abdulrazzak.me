@@ -73,10 +73,7 @@ a{ color:inherit; }
   border-bottom-color:var(--line);
 }
 .nav__mark{ display:flex; align-items:center; gap:10px; text-decoration:none; }
-.nav__ring{
-  width:13px; height:13px; border-radius:50%;
-  border:2px solid var(--amber); flex:none;
-}
+.nav__logo{ height:22px; width:auto; flex:none; display:block; }
 .nav__name{ font-family:var(--display); font-weight:600; letter-spacing:-.01em; font-size:.95rem; }
 .nav__links{ display:flex; align-items:center; gap:clamp(12px,2.2vw,28px); }
 .nav__links a{
