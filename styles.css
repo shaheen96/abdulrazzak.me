@@ -399,9 +399,10 @@ a{ color:inherit; }
    Language switch — Arabic layer over the same markup
    ========================================================== */
 .lang{
-  font-family:var(--mono); font-size:.72rem; letter-spacing:.08em;
+  font-family:var(--mono), "IBM Plex Sans Arabic";
+  font-size:.85rem; letter-spacing:.06em;
   background:transparent; color:var(--muted); cursor:pointer;
-  border:1px solid var(--line); border-radius:100px; padding:6px 13px;
+  border:1px solid var(--line); border-radius:100px; padding:7px 16px;
   transition:color .2s, border-color .2s;
 }
 .lang:hover{ color:var(--amber); border-color:var(--amber); }
