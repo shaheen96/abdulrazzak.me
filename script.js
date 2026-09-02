@@ -35,7 +35,11 @@ const REELS = [
   { host:"vimeo", id:"1222667458",
     poster:"images/maika-poster.jpg",
     title:"Maika", note:"Brand film — concept through to final grade.",
-    title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." }
+    title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." },
+  { host:"vimeo", id:"1223232488",
+    poster:"https://i.vimeocdn.com/video/2196396773-ba45bf674d156a6d8cebd4ad57eda1c4bd3f2ab9e634972e402f41701ee80cd5-d_1200",
+    title:"Welcome", note:"Corporate film — filmed, edited and graded.",
+    title_ar:"ترحيب", note_ar:"فيلم مؤسسي — تصوير ومونتاج وتدرّج لوني." }
 ];
 
 /* Vertical 9:16 reels.
@@ -118,7 +122,7 @@ const I18N = {
     "motion.lede":"From camera to final delivery, filming, editing, colour grading and post-production for brands, events and corporate projects.",
     "reels.eyebrow":"Selected Reels", "reels.title":"Reels & Social Video",
     "reels.lede":"Vertical-first content for brands, events and campaigns, covering filming, editing and post-production for social media.",
-    "reels.hint":"Drag or swipe \u2192",
+    "reels.hint":"Scroll sideways",
     "design.eyebrow":"Design experience", "design.title":"Graphic Design & Large Format",
     "design.lede":"I create visual content for digital, print and large-format applications, including social media, brand assets, banners, signage and outdoor advertising.",
     "design.view":"View project \u2197",
@@ -153,7 +157,7 @@ const I18N = {
     "motion.lede":"من التصوير إلى التسليم النهائي، تصوير ومونتاج وتصحيح وتدرّج الألوان وما بعد الإنتاج للعلامات التجارية والفعاليات والمشاريع المؤسسية.",
     "reels.eyebrow":"ريلز مختارة", "reels.title":"الريلز وفيديوهات السوشيال ميديا",
     "reels.lede":"محتوى فيديو عمودي للعلامات التجارية والفعاليات والحملات، يشمل التصوير والمونتاج وما بعد الإنتاج لمنصات التواصل الاجتماعي.",
-    "reels.hint":"اسحب للجانب \u2190",
+    "reels.hint":"مـــرّر  للجــانب",
     "design.eyebrow":"خبرة في التصميم", "design.title":"التصميم الجرافيكي والمطبوعات",
     "design.lede":"أصمم محتوى بصرياً للاستخدامات الرقمية والمطبوعة والإعلانات كبيرة الحجم، بما يشمل تصاميم وسائل التواصل الاجتماعي، وعناصر الهوية البصرية، والبانرات، واللوحات الإرشادية، والإعلانات الخارجية.",
     "design.view":"عرض المشروع \u2197",
