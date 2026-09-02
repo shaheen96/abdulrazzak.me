@@ -6,9 +6,6 @@
    ========================================================================= */
 
 const PHOTOS = [
-  { src:"images/work-grad.jpg", category:"events", caption:"Graduation Photos",
-    caption_ar:"صور التخرّج",
-    url:"https://www.behance.net/gallery/159386767/Graduation-Photos" },
   { src:"images/work-01.jpg", category:"portraits", caption:"Executive portrait",        exif:"85mm · f/1.8 · 1/160 · ISO 200" },
   { src:"images/work-02.jpg", category:"corporate", caption:"Facility walkthrough",      exif:"24mm · f/4 · 1/125 · ISO 400" },
   { src:"images/work-03.jpg", category:"events",    caption:"Opening night",             exif:"35mm · f/2 · 1/200 · ISO 1600" },
@@ -38,11 +35,7 @@ const REELS = [
   { host:"vimeo", id:"1222667458",
     poster:"images/maika-poster.jpg",
     title:"Maika", note:"Brand film — concept through to final grade.",
-    title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." },
-  { host:"vimeo", id:"1223232488",
-    poster:"https://i.vimeocdn.com/video/2196396773-ba45bf674d156a6d8cebd4ad57eda1c4bd3f2ab9e634972e402f41701ee80cd5-d_1200",
-    title:"Welcome", note:"Corporate film — filmed, edited and graded.",
-    title_ar:"ترحيب", note_ar:"فيلم مؤسسي — تصوير ومونتاج وتدرّج لوني." }
+    title_ar:"مايكا", note_ar:"فيلم علامة تجارية — من الفكرة حتى التدرّج النهائي." }
 ];
 
 /* Vertical 9:16 reels.
@@ -81,10 +74,6 @@ const VREELS = [
     poster:"https://i.vimeocdn.com/video/2195686136-df649bb520e681e2445630d104dd60ae992cff53ac3e59be2c29d492d5ec082b-d_1200",
     title:"Happy Onam", note:"Seasonal campaign",
     title_ar:"أونام سعيد", note_ar:"حملة موسمية" },
-  { type:"vimeo", id:"1223238287",
-    poster:"https://i.vimeocdn.com/video/2196404516-94b10a8064acd909e3a7aa0af697217cbba882e2c43c9ddccc8ee1316548ceb8-d_1200",
-    title:"Nano Teeth Whitening", note:"Treatment promo",
-    title_ar:"تبييض الأسنان بالنانو", note_ar:"إعلان علاجي" },
   { type:"vimeo", id:"1222613807",
     poster:"reels/reel-06.jpg",
     title:"Nano Teeth Whitening", note:"Treatment promo",
@@ -92,11 +81,7 @@ const VREELS = [
   { type:"vimeo", id:"1222646989",
     poster:"reels/reel-07.jpg",
     title:"Emirati Women's Day", note:"National campaign",
-    title_ar:"يوم المرأة الإماراتية", note_ar:"حملة وطنية" },
-  { type:"vimeo", id:"1222615083",
-    poster:"https://i.vimeocdn.com/video/2195619885-3c0457fd1edf7f05bc98cccd83ce0fcd3b4f751ecb13b601f91faa45096c91f7-d_1200",
-    title:"Lip Filler", note:"Treatment promo",
-    title_ar:"فيلر الشفاه", note_ar:"إعلان علاجي" }
+    title_ar:"يوم المرأة الإماراتية", note_ar:"حملة وطنية" }
 ];
 
 /* Design pieces. `url` is optional — add one and the tile becomes a link
@@ -133,7 +118,7 @@ const I18N = {
     "motion.lede":"From camera to final delivery, filming, editing, colour grading and post-production for brands, events and corporate projects.",
     "reels.eyebrow":"Selected Reels", "reels.title":"Reels & Social Video",
     "reels.lede":"Vertical-first content for brands, events and campaigns, covering filming, editing and post-production for social media.",
-    "reels.hint":"Scroll sideways",
+    "reels.hint":"Drag or swipe \u2192",
     "design.eyebrow":"Design experience", "design.title":"Graphic Design & Large Format",
     "design.lede":"I create visual content for digital, print and large-format applications, including social media, brand assets, banners, signage and outdoor advertising.",
     "design.view":"View project \u2197",
@@ -149,7 +134,7 @@ const I18N = {
     "contact.eyebrow":"Available for assignments and full-time roles",
     "contact.wa":"WhatsApp",
     "foot":"Dubai, UAE · +971 54 372 7507",
-    "frameWord":"Frame", "reelWord":"Reel", "projectWord":"Project", "langBtn":"العربية"
+    "frameWord":"Frame", "reelWord":"Reel", "langBtn":"العربية"
   },
   ar: {
     "skip":"تخطَّ إلى الأعمال",
@@ -168,7 +153,7 @@ const I18N = {
     "motion.lede":"من التصوير إلى التسليم النهائي، تصوير ومونتاج وتصحيح وتدرّج الألوان وما بعد الإنتاج للعلامات التجارية والفعاليات والمشاريع المؤسسية.",
     "reels.eyebrow":"ريلز مختارة", "reels.title":"الريلز وفيديوهات السوشيال ميديا",
     "reels.lede":"محتوى فيديو عمودي للعلامات التجارية والفعاليات والحملات، يشمل التصوير والمونتاج وما بعد الإنتاج لمنصات التواصل الاجتماعي.",
-    "reels.hint":"مـــرّر  للجــانب",
+    "reels.hint":"اسحب للجانب \u2190",
     "design.eyebrow":"خبرة في التصميم", "design.title":"التصميم الجرافيكي والمطبوعات",
     "design.lede":"أصمم محتوى بصرياً للاستخدامات الرقمية والمطبوعة والإعلانات كبيرة الحجم، بما يشمل تصاميم وسائل التواصل الاجتماعي، وعناصر الهوية البصرية، والبانرات، واللوحات الإرشادية، والإعلانات الخارجية.",
     "design.view":"عرض المشروع \u2197",
@@ -184,7 +169,7 @@ const I18N = {
     "contact.eyebrow":"متـــاح  للمهــام  المســـتقلة  و الوظـائف  بـــدوام  كـامــل",
     "contact.wa":"واتساب",
     "foot":"دبي، الإمارات · ‎+971 54 372 7507",
-    "frameWord":"الإطار", "reelWord":"ريل", "projectWord":"مشروع", "langBtn":"English"
+    "frameWord":"الإطار", "reelWord":"ريل", "langBtn":"English"
   }
 };
 
@@ -205,31 +190,19 @@ function renderGrid(filter = "all") {
   empty.hidden = shown.length > 0;
 
   shown.forEach((p, i) => {
-    // An entry with a `url` is a linked project, not a single frame:
-    // render it as an anchor that opens the gallery in a new tab
-    // instead of a button that opens the in-page lightbox.
-    const isLink = Boolean(p.url);
-    const cell = document.createElement(isLink ? "a" : "button");
-    cell.className = isLink ? "cell cell--link rv" : "cell rv";
-    if (isLink) {
-      cell.href = p.url;
-      cell.target = "_blank";
-      cell.rel = "noopener";
-    } else {
-      cell.type = "button";
-    }
+    const cell = document.createElement("button");
+    cell.className = "cell rv";
+    cell.type = "button";
     cell.setAttribute("aria-label", localised(p,"caption"));
     cell.dataset.i = i;
     cell.innerHTML = `
       <img src="${p.src}" alt="${localised(p,"caption")}" loading="lazy" decoding="async">
       <span class="cell__meta">
-        <span class="cell__no">${isLink ? T("projectWord") : T("frameWord") + " " + pad(i + 1)}</span>
+        <span class="cell__no">${T("frameWord")} ${pad(i + 1)}</span>
         <span class="cell__cap">${localised(p,"caption")}</span>
-        ${isLink
-          ? `<span class="cell__go">${T("design.view")}</span>`
-          : (p.exif ? `<span class="cell__exif">${p.exif}</span>` : "")}
+        ${p.exif ? `<span class="cell__exif">${p.exif}</span>` : ""}
       </span>`;
-    if (!isLink) cell.addEventListener("click", () => openLb(i));
+    cell.addEventListener("click", () => openLb(i));
     grid.appendChild(cell);
   });
   observeReveals();
@@ -410,15 +383,7 @@ function closeLb() {
   document.body.style.overflow = "";
   if (lastFocus) lastFocus.focus();
 }
-// Linked project entries have no lightbox view, so arrow navigation
-// steps past them instead of landing on a card it cannot display.
-const step = d => {
-  for (let n = 0; n < shown.length; n++) {
-    cur = (cur + d + shown.length) % shown.length;
-    if (!shown[cur].url) break;
-  }
-  paint();
-};
+const step = d => { cur = (cur + d + shown.length) % shown.length; paint(); };
 
 $("#lbClose").addEventListener("click", closeLb);
 $("#lbPrev").addEventListener("click", () => step(-1));

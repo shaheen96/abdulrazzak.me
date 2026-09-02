@@ -235,20 +235,6 @@ a{ color:inherit; }
 .cell__no{ font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; color:var(--amber); display:block; }
 .cell__cap{ font-size:.9rem; font-weight:500; color:var(--mist); }
 .cell__exif{ font-family:var(--mono); font-size:.63rem; letter-spacing:.08em; color:var(--muted); display:block; margin-top:2px; }
-/* A linked project card: always shows its label, and reveals the
-   outbound cue on hover the same way the design tiles do. */
-.cell--link{ text-decoration:none; cursor:pointer; }
-.cell--link .cell__meta{ opacity:1; transform:none; }
-.cell--link:hover{ border-color:var(--amber); }
-.cell__go{
-  display:block; margin-top:4px;
-  font-family:var(--mono); font-size:.62rem; letter-spacing:.1em;
-  text-transform:uppercase; color:var(--amber);
-  opacity:0; transform:translateY(-3px);
-  transition:opacity .3s ease, transform .3s ease;
-}
-.cell--link:hover .cell__go, .cell--link:focus-visible .cell__go{ opacity:1; transform:none; }
-[lang="ar"] .cell__go{ font-family:"IBM Plex Sans Arabic", var(--body); letter-spacing:0; text-transform:none; }
 .empty{ color:var(--muted); font-family:var(--mono); font-size:.8rem; }
 
 /* ---------- motion ---------- */
@@ -287,36 +273,8 @@ a{ color:inherit; }
 }
 .rail::-webkit-scrollbar{ height:6px; }
 .rail::-webkit-scrollbar-thumb{ background:var(--line); border-radius:99px; }
-/* Scroll cue — the rail scrolls horizontally, which is easy to miss
-   on desktop where there is no visible scrollbar until you hover.
-   Shown at every breakpoint, with a nudging arrow to draw the eye. */
-.rail__cue{
-  display:flex; align-items:center; justify-content:center; gap:9px;
-  margin-top:16px; color:var(--muted);
-}
-.rail__hint{
-  margin:0; font-family:var(--mono); font-size:.72rem;
-  letter-spacing:.14em; text-transform:uppercase;
-}
-[lang="ar"] .rail__hint{
-  font-family:"IBM Plex Sans Arabic", var(--body);
-  letter-spacing:0; text-transform:none; font-size:.86rem;
-}
-.rail__arrow{ display:flex; color:var(--amber); animation:nudge 1.9s ease-in-out infinite; }
-[dir="rtl"] .rail__arrow{ transform:scaleX(-1); }
-
-@keyframes nudge{
-  0%,100%{ transform:translateX(0); }
-  50%    { transform:translateX(6px); }
-}
-[dir="rtl"] .rail__arrow{ animation-name:nudge-rtl; }
-@keyframes nudge-rtl{
-  0%,100%{ transform:scaleX(-1) translateX(0); }
-  50%    { transform:scaleX(-1) translateX(6px); }
-}
-@media (prefers-reduced-motion:reduce){
-  .rail__arrow{ animation:none; }
-}
+.rail__hint{ margin:10px 0 0; }
+@media (min-width:900px){ .rail__hint{ display:none; } }
 
 .vreel{
   position:relative; flex:0 0 auto; width:clamp(190px,23vw,262px); aspect-ratio:9/16;
