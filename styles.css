@@ -235,6 +235,20 @@ a{ color:inherit; }
 .cell__no{ font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; color:var(--amber); display:block; }
 .cell__cap{ font-size:.9rem; font-weight:500; color:var(--mist); }
 .cell__exif{ font-family:var(--mono); font-size:.63rem; letter-spacing:.08em; color:var(--muted); display:block; margin-top:2px; }
+/* A linked project card: always shows its label, and reveals the
+   outbound cue on hover the same way the design tiles do. */
+.cell--link{ text-decoration:none; cursor:pointer; }
+.cell--link .cell__meta{ opacity:1; transform:none; }
+.cell--link:hover{ border-color:var(--amber); }
+.cell__go{
+  display:block; margin-top:4px;
+  font-family:var(--mono); font-size:.62rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--amber);
+  opacity:0; transform:translateY(-3px);
+  transition:opacity .3s ease, transform .3s ease;
+}
+.cell--link:hover .cell__go, .cell--link:focus-visible .cell__go{ opacity:1; transform:none; }
+[lang="ar"] .cell__go{ font-family:"IBM Plex Sans Arabic", var(--body); letter-spacing:0; text-transform:none; }
 .empty{ color:var(--muted); font-family:var(--mono); font-size:.8rem; }
 
 /* ---------- motion ---------- */
