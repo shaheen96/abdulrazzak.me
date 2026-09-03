@@ -8,20 +8,18 @@
 /* Photography projects. Same pattern as the reels: one entry per
    project, each linking out to its full gallery. Add a `url` and the
    card becomes a link; leave it off and the card opens in the
-   in-page lightbox instead (useful for single standalone frames).
-   `category` drives the filter chips — they hide themselves
-   automatically until at least two categories are present. */
+   in-page lightbox instead (useful for single standalone frames). */
 const PHOTOS = [
-  { src:"images/work-grad.jpg", category:"events", caption:"Graduation Photos",
+  { src:"images/work-grad.jpg", caption:"Graduation Photos",
     caption_ar:"صور التخرّج",
     url:"https://www.behance.net/gallery/159386767/Graduation-Photos" },
-  { src:"images/work-corporate.jpg", category:"corporate", caption:"Corporate Portraits",
+  { src:"images/work-corporate.jpg", caption:"Corporate Portraits",
     caption_ar:"بورتريهات مؤسسية",
     url:"https://shahin25.pixieset.com/corporateportraits/" },
-  { src:"images/work-architecture.jpg", category:"location", caption:"Architecture & Interiors",
+  { src:"images/work-architecture.jpg", caption:"Architecture & Interiors",
     caption_ar:"العمارة والتصميم الداخلي",
     url:"https://shahin25.pixieset.com/architectureandinteriors/" },
-  { src:"images/work-events.jpg", category:"events", caption:"Event Photography",
+  { src:"images/work-events.jpg", caption:"Event Photography",
     caption_ar:"تصوير الفعاليات",
     url:"https://shahin25.pixieset.com/eventphotography/" }
 ];
@@ -128,10 +126,8 @@ const I18N = {
     "hero.sub":"Photographer & Videographer based in Dubai. I shoot corporate, event, portrait and product work across the UAE, then take it through post-production to polished, on-brand final content.",
     "hero.cta1":"See the work", "hero.cta2":"Download CV", "scroll":"Scroll",
     "work.eyebrow":"Selected photography", "work.title":"Featured Work",
-    "work.lede":"A tight edit, not an archive. Filter by what you need to see.",
+    "work.lede":"A tight edit, not an archive.",
     "work.empty":"No frames in this set yet.",
-    "filter.all":"All", "filter.corporate":"Corporate", "filter.events":"Events",
-    "filter.portraits":"Portraits", "filter.product":"Product", "filter.location":"Location",
     "motion.eyebrow":"Selected Video", "motion.title":"Video Production",
     "motion.lede":"From camera to final delivery, filming, editing, colour grading and post-production for brands, events and corporate projects.",
     "reels.eyebrow":"Selected Reels", "reels.title":"Reels & Social Video",
@@ -163,10 +159,8 @@ const I18N = {
     "hero.sub":"مصور فوتوغرافي وفيديو مقيم في دبي. أصوّر الأعمال المؤسسية والفعاليات والبورتريه والمنتجات في أنحاء الإمارات، ثم أتولّى المونتاج والمعالجة وما بعد الإنتاج حتى تسليم محتوى نهائي متوافق مع هوية العلامة التجارية.",
     "hero.cta1":"شاهد الأعمال", "hero.cta2":"تحميل السيرة الذاتية", "scroll":"مرّر",
     "work.eyebrow":"صور مختارة", "work.title":"أبرز الأعمال",
-    "work.lede":"اختيار مختصر، وليس أرشيفاً كاملاً. استخدم الفلاتر لعرض ما تحتاج إلى رؤيته.",
+    "work.lede":"اختيار مختصر، وليس أرشيفاً كاملاً.",
     "work.empty":"لا توجد صور في هذه الفئة بعد.",
-    "filter.all":"الكل", "filter.corporate":"مؤسسي", "filter.events":"فعاليات",
-    "filter.portraits":"بورتريه", "filter.product":"منتجات", "filter.location":"مواقع",
     "motion.eyebrow":"فيديوهات مختارة", "motion.title":"إنتاج الفيديو",
     "motion.lede":"من التصوير إلى التسليم النهائي، تصوير ومونتاج وتصحيح وتدرّج الألوان وما بعد الإنتاج للعلامات التجارية والفعاليات والمشاريع المؤسسية.",
     "reels.eyebrow":"ريلز مختارة", "reels.title":"الريلز وفيديوهات السوشيال ميديا",
@@ -202,16 +196,8 @@ let shown = PHOTOS.slice();
 
 const pad = n => String(n).padStart(3, "0");
 
-function renderGrid(filter = "all") {
-  // Filter chips are pointless while everything sits in one category —
-  // most of them would just lead to an empty grid. Show the bar only
-  // once at least two categories are represented.
-  const cats = new Set(PHOTOS.map(p => p.category));
-  const filters = document.querySelector(".filters");
-  if (filters) filters.hidden = cats.size < 2;
-  if (cats.size < 2) filter = "all";
-
-  shown = filter === "all" ? PHOTOS.slice() : PHOTOS.filter(p => p.category === filter);
+function renderGrid() {
+  shown = PHOTOS.slice();
   grid.innerHTML = "";
   empty.hidden = shown.length > 0;
 
@@ -245,18 +231,6 @@ function renderGrid(filter = "all") {
   });
   observeReveals();
 }
-
-document.querySelectorAll(".chip").forEach(chip => {
-  chip.addEventListener("click", () => {
-    document.querySelectorAll(".chip").forEach(c => {
-      c.classList.remove("is-on");
-      c.setAttribute("aria-selected", "false");
-    });
-    chip.classList.add("is-on");
-    chip.setAttribute("aria-selected", "true");
-    renderGrid(chip.dataset.filter);
-  });
-});
 
 /* ---- motion (landscape) ---- */
 function renderReels() {
@@ -535,8 +509,7 @@ function applyLang(lang) {
   if (btn) btn.textContent = T("langBtn");
 
   // re-render the data-driven sections so their labels follow the language
-  const on = document.querySelector(".chip.is-on");
-  renderGrid(on ? on.dataset.filter : "all");
+  renderGrid();
   renderReels();
   renderVReels();
   renderDesign();
