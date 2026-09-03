@@ -14,7 +14,16 @@
 const PHOTOS = [
   { src:"images/work-grad.jpg", category:"events", caption:"Graduation Photos",
     caption_ar:"صور التخرّج",
-    url:"https://www.behance.net/gallery/159386767/Graduation-Photos" }
+    url:"https://www.behance.net/gallery/159386767/Graduation-Photos" },
+  { src:"images/work-corporate.jpg", category:"corporate", caption:"Corporate Portraits",
+    caption_ar:"بورتريهات مؤسسية",
+    url:"https://shahin25.pixieset.com/corporateportraits/" },
+  { src:"images/work-architecture.jpg", category:"location", caption:"Architecture & Interiors",
+    caption_ar:"العمارة والتصميم الداخلي",
+    url:"https://shahin25.pixieset.com/architectureandinteriors/" },
+  { src:"images/work-events.jpg", category:"events", caption:"Event Photography",
+    caption_ar:"تصوير الفعاليات",
+    url:"https://shahin25.pixieset.com/eventphotography/" }
 ];
 
 /* Landscape 16:9 films for the Motion section.
