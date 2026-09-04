@@ -78,6 +78,10 @@ const VREELS = [
     poster:"https://i.vimeocdn.com/video/2195632700-acf43df98d3db9143edb60f33bcc9c5c6548c70122eca0f7f1673a4351d0593c-d_1200",
     title:"Dr Sunny App", note:"Product launch",
     title_ar:"تطبيق دكتور صني", note_ar:"إطلاق منتج" },
+  { type:"vimeo", id:"1223904502",
+    poster:"https://i.vimeocdn.com/video/2197239181-53161abac3bfa510884f7c7bc5994426297a28576a2320741baeebecf4224018-d_1200",
+    title:"AI Wedding Invitation", note:"AI-generated concept film",
+    title_ar:"دعوة زفاف بالذكاء الاصطناعي", note_ar:"فيلم مفاهيمي مولّد بالذكاء الاصطناعي" },
   { type:"vimeo", id:"1222668318",
     poster:"https://i.vimeocdn.com/video/2195686136-df649bb520e681e2445630d104dd60ae992cff53ac3e59be2c29d492d5ec082b-d_1200",
     title:"Happy Onam", note:"Seasonal campaign",
@@ -107,7 +111,8 @@ const DESIGNS = [
     title:"Social Media", title_ar:"تصاميم السوشال ميديا", url:"https://www.behance.net/gallery/244742483/Social-Media" },
   { src:"images/design/design-02.jpg", alt:"Haram Transfer brand guidelines",
     title:"Brand Guidelines", title_ar:"دليل الهوية البصرية", url:"https://www.behance.net/gallery/159319755/Brand-Guidelines" },
-  { src:"images/design/design-03.jpg", alt:"Outdoor signage layout" }
+  { src:"images/design/design-03.jpg", alt:"Social media post designs",
+    title:"Social Media Posts", title_ar:"منشورات السوشال ميديا", url:"https://www.behance.net/gallery/180026977/Social-media-Post" }
 ];
 
 
