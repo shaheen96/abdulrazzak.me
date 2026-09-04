@@ -88,6 +88,16 @@ a{ color:inherit; }
   transition:color .2s ease;
 }
 .nav__links a:hover{ color:var(--mist); }
+/* Active-section indicator: the link for the section currently in view
+   lights up, so the nav doubles as a position marker while scrolling. */
+.nav__links a.is-here{ color:var(--mist); }
+.nav__links a:not(.nav__cta){ position:relative; }
+.nav__links a:not(.nav__cta)::after{
+  content:""; position:absolute; left:0; right:0; bottom:-6px; height:1px;
+  background:var(--amber); transform:scaleX(0); transform-origin:center;
+  transition:transform .3s cubic-bezier(.2,.7,.3,1);
+}
+.nav__links a.is-here::after{ transform:scaleX(1); }
 .nav__cta{
   color:var(--ink) !important; background:var(--amber);
   padding:7px 15px; border-radius:100px; font-weight:600;

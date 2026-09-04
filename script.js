@@ -428,6 +428,40 @@ const onScroll = () => nav.classList.toggle("is-stuck", window.scrollY > 40);
 addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
+/* ---- active section in the nav ---- */
+(function trackSection(){
+  const links = [...document.querySelectorAll('.nav__links a[href^="#"]')]
+    .filter(a => !a.classList.contains("nav__cta"));
+  const sections = links
+    .map(a => ({ link: a, el: document.getElementById(a.getAttribute("href").slice(1)) }))
+    .filter(s => s.el);
+  if (!sections.length) return;
+
+  const mark = () => {
+    // the section covering the point just below the fixed header wins
+    const line = window.scrollY + 120;
+    let current = null;
+    for (const s of sections) {
+      if (s.el.offsetTop <= line) current = s;
+    }
+    // past the last section, keep the final link lit
+    if (!current && window.scrollY + window.innerHeight >= document.body.scrollHeight - 4) {
+      current = sections[sections.length - 1];
+    }
+    links.forEach(a => a.classList.remove("is-here"));
+    if (current) current.link.classList.add("is-here");
+  };
+
+  let ticking = false;
+  addEventListener("scroll", () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { mark(); ticking = false; });
+  }, { passive: true });
+  addEventListener("resize", mark, { passive: true });
+  mark();
+})();
+
 let io;
 function observeReveals() {
   if (!("IntersectionObserver" in window)) {
