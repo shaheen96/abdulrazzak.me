@@ -79,7 +79,7 @@ const VREELS = [
     title:"Dr Sunny App", note:"Product launch",
     title_ar:"تطبيق دكتور صني", note_ar:"إطلاق منتج" },
   { type:"vimeo", id:"1223904502",
-    poster:"https://i.vimeocdn.com/video/2197239181-53161abac3bfa510884f7c7bc5994426297a28576a2320741baeebecf4224018-d_1200",
+    poster:"reels/wedding-invite.jpg",
     title:"AI Wedding Invitation", note:"AI-generated concept film",
     title_ar:"دعوة زفاف بالذكاء الاصطناعي", note_ar:"فيلم مفاهيمي مولّد بالذكاء الاصطناعي" },
   { type:"vimeo", id:"1222668318",
