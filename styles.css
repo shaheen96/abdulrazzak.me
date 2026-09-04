@@ -461,7 +461,10 @@ a{ color:inherit; }
 [lang="ar"] .eyebrow,
 [lang="ar"] .lede,
 [lang="ar"] .cell__cap,
+[lang="ar"] .cell__no,
 [lang="ar"] .vreel__title,
+[lang="ar"] .vreel__note,
+[lang="ar"] .vreel__no,
 [lang="ar"] .tile__title,
 [lang="ar"] .reel__cap h3{
   font-family:"IBM Plex Sans Arabic", var(--body);
